@@ -39,7 +39,7 @@ jobs:
           command: echo 1
           name: Run Fastlane
 orbs:
-  rn: react-native-community/react-native@1.0.0
+  rn: react-native-community/react-native@4.1.0
 version: 2.1
 workflows:
   test:
@@ -69,19 +69,19 @@ workflows:
           device: iPhone X
           name: build_ios_release
           node_version: '10'
-          project_path: ios/Example.xcodeproj
+          project_path: ios/CribbageTheGameV2.xcodeproj
           requires:
             - analyse_js
-          scheme: Example
+          scheme: CribbageTheGameV2
       - rn/ios_build_and_test:
           build_configuration: Release
           detox_configuration: ios.sim.release
           device: iPhone X
           node_version: '10'
-          project_path: ios/Example.xcodeproj
+          project_path: ios/CribbageTheGameV2.xcodeproj
           requires:
             - analyse_js
-          scheme: Example
+          scheme: CribbageTheGameV2
       - fastlane_android_release:
           requires:
             - rn/android_test

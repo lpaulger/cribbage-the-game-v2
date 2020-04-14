@@ -77,6 +77,19 @@ import com.android.build.OutputFile
  * ]
  */
 
+ task downloadDependencies() {
+  description 'Download all dependencies to the Gradle cache'
+  doLast {
+    configurations.findAll().each { config ->
+      if (config.name.contains("minReactNative") && config.canBeResolved) {
+        print config.name
+        print '\n'
+        config.files
+      }
+    }
+  }
+}
+
 project.ext.react = [
     enableHermes: true,  // clean and rebuild if changing
 ]

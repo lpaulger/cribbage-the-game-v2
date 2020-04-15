@@ -29,15 +29,6 @@ jobs:
       - run:
           command: echo
           name: Run Fastlane
-  fastlane_ios_release:
-    executor: rn/linux_js
-    steps:
-      - attach_workspace:
-          at: .
-      - rn/yarn_install
-      - run:
-          command: echo 1
-          name: Run Fastlane
 orbs:
   rn: react-native-community/react-native@4.1.0
 version: 2.1
@@ -64,27 +55,6 @@ workflows:
           detox_configuration: android.emu.release
           requires:
             - build_android_release
-      - rn/ios_build:
-          build_configuration: Release
-          device: iPhone X
-          name: build_ios_release
-          node_version: '10'
-          project_path: ios/CribbageTheGameV2.xcodeproj
-          requires:
-            - analyse_js
-          scheme: CribbageTheGameV2
-      - rn/ios_build_and_test:
-          build_configuration: Release
-          detox_configuration: ios.sim.release
-          device: iPhone X
-          node_version: '10'
-          project_path: ios/CribbageTheGameV2.xcodeproj
-          requires:
-            - analyse_js
-          scheme: CribbageTheGameV2
       - fastlane_android_release:
           requires:
             - rn/android_test
-      - fastlane_ios_release:
-          requires:
-            - rn/ios_build_and_test

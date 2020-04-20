@@ -7,7 +7,8 @@
  *
  * @format
  */
-
+import Reactotron from 'reactotron-react-native';
+import { StorybookUIHMRRoot } from './storybook';
 import React from 'react';
 import {
   SafeAreaView,
@@ -26,7 +27,11 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-declare const global: {HermesInternal: null | {}};
+if (__DEV__) {
+  import('./storybook').then(() => console.log('Reactotron Configured'));
+}
+
+declare const global: { HermesInternal: null | {} };
 
 const App = () => {
   return (
@@ -115,4 +120,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Reactotron.storybookSwitcher(StorybookUIHMRRoot)(App);

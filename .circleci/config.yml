@@ -29,15 +29,6 @@ jobs:
       - run:
           command: echo
           name: Run Fastlane
-  fastlane_ios_release:
-    executor: rn/linux_js
-    steps:
-      - attach_workspace:
-          at: .
-      - rn/yarn_install
-      - run:
-          command: echo 1
-          name: Run Fastlane
 orbs:
   rn: react-native-community/react-native@4.1.0
 version: 2.1

@@ -6,6 +6,6 @@ export default function Button({ onPress, children }: ButtonProps) {
 }
 
 type ButtonProps = {
-  children: any;
+  children?: any;
   onPress: () => void | {};
 };

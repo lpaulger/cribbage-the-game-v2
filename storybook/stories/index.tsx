@@ -14,7 +14,7 @@ storiesOf('Button', module)
   .addDecorator((getStory: () => null) => <CenterView>{getStory()}</CenterView>)
   .add('with text', () => (
     <Button onPress={action('clicked-text')}>
-      <Text>Hello Button </Text>
+      <Text>Hello Button</Text>
     </Button>
   ))
   .add('with some emoji', () => (

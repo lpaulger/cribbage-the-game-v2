@@ -33,7 +33,7 @@ if (__DEV__) {
 
 declare const global: { HermesInternal: null | {} };
 
-const App = () => {
+export const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />

@@ -11,8 +11,11 @@ import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
   renderer.create(
-    <Button onPress={() => { }}>
-      <Text>Button Test</Text>
+    <Button
+      onPress={() => {
+        /* */
+      }}>
+      <Text> Button Test</Text>
     </Button>,
   );
 });

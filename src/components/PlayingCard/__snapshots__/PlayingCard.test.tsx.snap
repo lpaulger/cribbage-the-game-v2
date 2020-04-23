@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  pointerEvents="box-none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={true}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <RNSVGSvgView
+      align="none"
+      bbHeight={168}
+      bbWidth={120}
+      focusable={false}
+      height={168}
+      meetOrSlice={0}
+      minX={-120}
+      minY={-168}
+      showFace={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 168,
+            "width": 120,
+          },
+        ]
+      }
+      suit="Club"
+      value="A"
+      vbHeight={336}
+      vbWidth={240}
+      width={120}
+    >
+      <RNSVGGroup>
+        <RNSVGSymbol
+          align="xMinYMid"
+          meetOrSlice={0}
+          minX={-600}
+          minY={-600}
+          name="Suit_Club"
+          vbHeight={1200}
+          vbWidth={1200}
+        >
+          <RNSVGPath
+            d="M30 150c5 235 55 250 100 350h-260c45-100 95-115 100-350a10 10 0 00-20 0 210 210 0 11-74-201 10 10 0 0014-14 230 230 0 11220 0 10 10 0 0014 14 210 210 0 11-74 201 10 10 0 00-20 0z"
+            fill={4278190080}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGSymbol>
+        <RNSVGSymbol
+          align="xMinYMid"
+          meetOrSlice={0}
+          minX={-600}
+          minY={-600}
+          name="Suit_Spade"
+          vbHeight={1200}
+          vbWidth={1200}
+        >
+          <RNSVGPath
+            d="M0-500c100 250 355 400 355 685a150 150 0 01-300 0 10 10 0 00-20 0c0 200 50 215 95 315h-260c45-100 95-115 95-315a10 10 0 00-20 0 150 150 0 01-300 0c0-285 255-435 355-685z"
+            fill={4278190080}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGSymbol>
+        <RNSVGSymbol
+          align="xMinYMid"
+          meetOrSlice={0}
+          minX={-600}
+          minY={-600}
+          name="Suit_Diamond"
+          vbHeight={1200}
+          vbWidth={1200}
+        >
+          <RNSVGPath
+            d="M-400 0C-350 0 0-450 0-500 0-450 350 0 400 0 350 0 0 450 0 500 0 450-350 0-400 0z"
+            fill={4294901760}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGSymbol>
+        <RNSVGSymbol
+          align="xMinYMid"
+          meetOrSlice={0}
+          minX={-600}
+          minY={-600}
+          name="Suit_Heart"
+          vbHeight={1200}
+          vbWidth={1200}
+        >
+          <RNSVGPath
+            d="M0-300c0-100 100-200 200-200s200 100 200 250C400 0 0 400 0 500 0 400-400 0-400-250c0-150 100-250 200-250S0-400 0-300z"
+            fill={4294901760}
+            propList={
+              Array [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGSymbol>
+        <RNSVGRect
+          fill={4294967295}
+          height={335}
+          propList={
+            Array [
+              "fill",
+              "stroke",
+            ]
+          }
+          rx={12}
+          ry={12}
+          stroke={4278190080}
+          width={239}
+          x={-119.5}
+          y={-167.5}
+        />
+        <RNSVGSymbol
+          align="xMinYMid"
+          meetOrSlice={0}
+          minX={-500}
+          minY={-500}
+          name="Value_1"
+          vbHeight={1000}
+          vbWidth={1000}
+        >
+          <RNSVGPath
+            d="M-270 460h160m-90-10L0-460l200 910m-90 10h160m-390-330h240"
+            fill={null}
+            propList={
+              Array [
+                "fill",
+                "stroke",
+                "strokeWidth",
+                "strokeLinecap",
+                "strokeMiterlimit",
+              ]
+            }
+            stroke={4278190080}
+            strokeLinecap={2}
+            strokeMiterlimit={1.5}
+            strokeWidth={80}
+          />
+        </RNSVGSymbol>
+        <RNSVGUse
+          height={70}
+          href="Suit_Club"
+          width={70}
+          x={-35}
+          y={-35}
+        />
+        <RNSVGUse
+          height={32}
+          href="Value_1"
+          width={32}
+          x={-114.4}
+          y={-156}
+        />
+        <RNSVGUse
+          height={26.769}
+          href="Suit_Club"
+          width={26.769}
+          x={-111.784}
+          y={-119}
+        />
+        <RNSVGGroup
+          matrix={
+            Array [
+              -1,
+              1.2246467991473532e-16,
+              -1.2246467991473532e-16,
+              -1,
+              0,
+              0,
+            ]
+          }
+        >
+          <RNSVGUse
+            height={32}
+            href="Value_1"
+            width={32}
+            x={-114.4}
+            y={-156}
+          />
+          <RNSVGUse
+            height={26.769}
+            href="Suit_Club"
+            width={26.769}
+            x={-111.784}
+            y={-119}
+          />
+        </RNSVGGroup>
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;

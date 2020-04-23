@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react-native';
 import { action } from '@storybook/addon-actions';
 
 import Button from './Button';
-import CenterView from './CenterView';
+import CenterView from '../../src/components/Layout/CenterView';
 import Welcome from './Welcome';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome />);

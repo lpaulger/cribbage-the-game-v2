@@ -1,8 +1,7 @@
 import Reactotron from 'reactotron-react-native';
-import AsyncStorage from '@react-native-community/async-storage';
 
 import React from 'react';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, NativeModules } from 'react-native';
 import {
   getStorybookUI,
   configure,
@@ -21,6 +20,12 @@ configure(() => {
   loadStories();
 }, module);
 
+let scriptHostname;
+if (__DEV__) {
+  const scriptURL = NativeModules.SourceCode.scriptURL;
+  scriptHostname = scriptURL.split('://')[1].split(':')[0];
+}
+
 // Refer to https://github.com/storybookjs/storybook/tree/master/app/react-native#start-command-parameters
 // To find allowed options for getStorybookUI
 const StorybookUIRoot = getStorybookUI({ port: 7007, onDeviceUI: true }); // This configuration can be changed based upon personal wants
@@ -30,10 +35,10 @@ const StorybookUIRoot = getStorybookUI({ port: 7007, onDeviceUI: true }); // Thi
 AppRegistry.registerComponent('%APP_NAME%', () => StorybookUIRoot);
 
 //@ts-ignore
-Reactotron.setAsyncStorageHandler(AsyncStorage) // AsyncStorage would either come from `react-native` or `@react-native-community/async-storage` depending on where you get it from
-  .configure({
-    name: 'React Native Demo',
-  })
+Reactotron.configure({
+  name: 'React Native Demo',
+  host: scriptHostname,
+})
   .useReactNative()
   .connect();
 

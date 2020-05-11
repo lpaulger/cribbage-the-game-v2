@@ -18,14 +18,7 @@ import {
 import { Card_J } from './InnerCard/Jack';
 import { Card_Q } from './InnerCard/Queen';
 import { Card_K } from './InnerCard/King';
-
-// export const PlayingCard = (props: PlayingCardProps) => {
-//   return <Card {...props} />;
-// };
-
-// CARD CONSTANTS
-const CARD_SCALE = 0.5;
-const CARD_BACK_COLOR = 'red';
+import { CARD_HEIGHT, CARD_WIDTH, CARD_BACK_COLOR } from './constants';
 
 export function PlayingCard(props: PlayingCardProps) {
   const InnerCard = InnerCardComponents[`Card_${props.value}`];
@@ -40,10 +33,10 @@ export function PlayingCard(props: PlayingCardProps) {
 
   return (
     <Svg
-      height={336 * CARD_SCALE}
+      height={CARD_HEIGHT}
       preserveAspectRatio="none"
       viewBox="-120 -168 240 336"
-      width={240 * CARD_SCALE}
+      width={CARD_WIDTH}
       {...props}>
       <Symbol
         id="Suit_Club"

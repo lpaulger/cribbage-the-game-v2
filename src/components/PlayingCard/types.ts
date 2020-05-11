@@ -12,7 +12,7 @@ export enum SUIT {
 }
 
 export interface PlayingCardProps {
-  suit: SUIT;
-  value: string;
+  suit?: SUIT;
+  value?: string;
   showFace?: boolean;
 }

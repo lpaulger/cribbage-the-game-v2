@@ -6,7 +6,7 @@ export default function CenterView({ children }: CenterView) {
 }
 
 type CenterView = {
-  children: null;
+  children: any;
 };
 
 const styles = StyleSheet.create({

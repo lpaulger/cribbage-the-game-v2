@@ -2,7 +2,7 @@ import React from 'react';
 import { SUIT } from './types';
 import { storiesOf } from '@storybook/react-native';
 import { withKnobs, select, boolean } from '@storybook/addon-knobs';
-import CenterView from '../Layout/CenterView';
+import { CenterView } from '../Layout/CenterView';
 import { View } from 'react-native';
 import { PlayingCard } from '.';
 

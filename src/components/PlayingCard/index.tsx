@@ -1,6 +1,6 @@
+import React from 'react';
 import Svg, { Symbol, Path, Rect, Defs, Pattern } from 'react-native-svg';
 import { SUIT, PlayingCardProps } from './types';
-import React from 'react';
 
 import {
   Card_A,

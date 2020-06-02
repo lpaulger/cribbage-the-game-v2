@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-export default function CenterView({ children }: CenterView) {
+export const CenterView = ({ children }: CenterView) => {
   return <View style={styles.main}>{children}</View>;
-}
+};
 
 type CenterView = {
   children: any;

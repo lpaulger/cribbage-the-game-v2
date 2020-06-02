@@ -10,29 +10,32 @@
 import Reactotron from 'reactotron-react-native';
 import { StorybookUIHMRRoot } from '../storybook';
 import React from 'react';
-import { SafeAreaView, ScrollView, View, Text, StatusBar } from 'react-native';
+
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import { HomeScreen } from './screens/Home';
+import { GameScreen } from './screens/Game';
 
 if (__DEV__) {
   import('../storybook').then(() => console.log('Reactotron Configured'));
 }
 
-declare const global: { HermesInternal: null | {} };
+const Stack = createStackNavigator();
 
 export const App = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-          {global.HermesInternal == null ? null : (
-            <View>
-              <Text>Engine: Hermes</Text>
-            </View>
-          )}
-          <Text>Lucas Test</Text>
-        </ScrollView>
-      </SafeAreaView>
-    </>
+    <NavigationContainer>
+      <Stack.Navigator headerMode="none">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="Game"
+          component={GameScreen}
+          options={{ gestureEnabled: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
